@@ -21,7 +21,7 @@ WORKDIR /app
 
 COPY ./HuaweiWifiSms.slnx ./global.json ./Directory.Packages.props ./Directory.Build.props ./.gitignore ./.editorconfig ./
 
-COPY ./HuaweiWifiSms/HuaweiWifiSms.csproj ./HuaweiWifiSms/packages.lock.json ./HuaweiWifiSms
+COPY ./HuaweiWifiSms/HuaweiWifiSms.csproj ./HuaweiWifiSms/packages.lock.json ./HuaweiWifiSms/
 
 RUN dotnet restore --locked-mode
 
