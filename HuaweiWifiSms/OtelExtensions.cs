@@ -21,7 +21,7 @@ public static class OtelExtensions
         builder
             .Services.AddOpenTelemetry()
             .WithMetrics(metrics => metrics.AddAspNetCoreInstrumentation().AddRuntimeInstrumentation())
-            .WithTracing(tracing => tracing.AddSource(Tracing.SourceName).AddAspNetCoreInstrumentation());
+            .WithTracing(tracing => tracing.AddSource(Otel.SourceName).AddAspNetCoreInstrumentation());
 
         if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))
         {
